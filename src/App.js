@@ -1,25 +1,21 @@
-import logo from './logo.svg';
+import React from 'react';
+import ContactList from './components/ContactList/ContactList';
+import PostsList from './components/PostsList/PostsList';
+import HeavyComputationComponent from './components/HeavyComputationComponent/HeavyComputationComponent';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <ContactList />
+      <PostsList />
+      <HeavyComputationComponent
+        items={['Apple', 'Banana', 'Orange', 'Mango', 'Pineapple', 'Peach']}
+        filterTerm=""
+      />
     </div>
   );
-}
+};
 
 export default App;
+
